@@ -431,6 +431,7 @@ label {
     & input {
         position: absolute;
         opacity: 0;
+        top: 0;
         width: 4rem;
         height: 2rem;
         border-radius: 999px;
@@ -442,9 +443,8 @@ label {
 
         & .style-dot {
             background-color: var(--text-heading);
-            margin-right: 4px;
-            margin-left: 2.15rem;
-            position: relative;
+            transform: translateX(32px);
+            position: absolute;
         }
     }
 }
@@ -473,6 +473,7 @@ input[type="file"] {
 }
 
 
+
 @media (width >= 120em) {
     .aside-container {
         padding: 3rem;
@@ -489,5 +490,11 @@ input[type="file"] {
 
     p {
         font-size: 1.5rem;
+    }
+}
+
+@media (width <= 26rem) {
+    aside {
+        display: none;
     }
 }

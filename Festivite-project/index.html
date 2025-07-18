@@ -219,31 +219,33 @@
                                 <label id="style">Estilo</label>
                                 <div class="flex gap-.75 item-center toggle-wrapper">
                                     <div class="inner-style">
-                                        <div class="style-dot">
-                                            <input type="checkbox" name="dark-light" id="toggle">
-                                        </div>
+                                        <div class="style-dot"></div>
+                                        <input type="checkbox" name="dark-light" id="toggle">
                                     </div>
                                     <label id="lb-dark">Escuro</label>
                                     <label id="lb-light">Claro</label>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </fieldset>
 
-                            <div class="cover-photo flex">
-                                <label id="style">Foto de capa</label>
-                                <div class="inner-button">
-                                    <div class="btn-primary">
-                                        <label for="file-select" class="flex item-center gap-.5 inner-lb">
-                                            <img src="assets/icons/upload.svg" alt="upload image">
-                                            Selecionar
-                                        </label>
-                                    </div>
+                <fieldset class="contact-info">
+                    <legend class="flex item-center gap-.75">
+                        <img src="assets/icons/contact.svg" alt="ícone de pincel">
+                        <h3>Dados para contato</h3>
+                    </legend>
 
-                                    <input type="file" name="files" id="file-select">
-                                </div>
+                    <div class="data-wrapper">
+                        <div class="grid gap-.75">
+                            <label>Nome</label>
+                            <input type="text" placeholder="Nome completo" required>
+                            <div class="error-wrapper flex item-center">
+                                <img src="assets/icons/alert.svg" alt="imagem de alerta">
+                                <small>Campo obrigatório</small>
                             </div>
                         </div>
                     </div>
-                    
                 </fieldset>
             </form>
         </nav>
