@@ -39,17 +39,17 @@
                     <div class="input-wrapper">
                         <div class="about-title grid gap-.75">
                             <label>Título</label>
-                            <input type="text" placeholder="Nome do evento" required>
+                            <input type="text" placeholder="Nome do evento">
                         </div>
 
                         <div class="grid gap-.75">
                             <label>Início</label>
-                            <input type="datetime-local" required>
+                            <input type="datetime-local">
                         </div>
 
                         <div class="grid gap-.75">
                             <label>Fim</label>
-                            <input type="datetime-local" required>
+                            <input type="datetime-local">
                         </div>
 
                         <div class="grid gap-.75">
@@ -71,7 +71,7 @@
 
                         <div class="grid gap-.75">
                             <label>Local</label>
-                            <input type="text" placeholder="Link ou endereço" required>
+                            <input type="text" placeholder="Link ou endereço">
                         </div>
 
                         <div class="about-textarea grid">
@@ -236,7 +236,7 @@
                         <h3>Dados para contato</h3>
                     </legend>
 
-                    <div class="data-wrapper">
+                    <div class="data-wrapper grid gap-1">
                         <div class="grid gap-.75">
                             <label>Nome</label>
                             <input type="text" placeholder="Nome completo" required>
@@ -245,8 +245,54 @@
                                 <small>Campo obrigatório</small>
                             </div>
                         </div>
+
+                        <div class="info-wrapper grid gap-1">
+                            <div class="grid gap-.75 inner-data">
+                                <label>E-mail</label>
+                                <input type="email" placeholder="exemplo@email.com" required>
+                                <div class="error-wrapper flex item-center">
+                                    <img src="assets/icons/alert.svg" alt="imagem de alerta">
+                                    <small>Campo obrigatório</small>
+                                </div>
+                            </div>
+
+                            <div class="grid gap-.75">
+                                <label>Telefone</label>
+                                <input type="tel" placeholder="(99) 99999-9999" required>
+                                <div class="error-wrapper flex item-center">
+                                    <img src="assets/icons/alert.svg" alt="imagem de alerta">
+                                    <small>Campo obrigatório</small>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </fieldset>
+
+                <fieldset class="terms">
+                    <div class="terms-wrapper grid">
+                        <div class="flex gap-.75 item-center">
+                            <input type="checkbox" id="accept-terms" required>
+                            <label for="accept-terms">Li e concordo com os <a href="#">Termos e Condições</a> e com a <a href="#">Política de Privacidade</a></label>
+                        </div>
+
+                        <div class="flex gap-.75 item-center">
+                            <input type="checkbox" id="accept-email">
+                            <label for="accept-email">Aceito receber atualizações e promoções por e-mail</label>
+                        </div>
+
+                        <div class="flex gap-.75 item-center">
+                            <input type="checkbox" id="accept-sms">
+                            <label for="accept-sms">Aceito receber atualizações e promoções por SMS</label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <div class="submit-button flex">
+                    <button type="submit" class="btn-primary ">
+                        <img src="assets/icons/ticket.svg" alt="imagem de ticket do botão submit">
+                        Gerar convite
+                    </button>
+                </div>
             </form>
         </nav>
     </main>
