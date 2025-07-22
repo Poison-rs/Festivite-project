@@ -38,30 +38,30 @@
 
                     <div class="input-wrapper">
                         <div class="about-title grid gap-.75">
-                            <label>Título</label>
+                            <label id="style">Título</label>
                             <input type="text" placeholder="Nome do evento">
                         </div>
 
                         <div class="grid gap-.75">
-                            <label>Início</label>
+                            <label id="style">Início</label>
                             <input type="datetime-local">
                         </div>
 
                         <div class="grid gap-.75">
-                            <label>Fim</label>
+                            <label id="style">Fim</label>
                             <input type="datetime-local">
                         </div>
 
                         <div class="grid gap-.75">
-                            <label>Tipo</label>
+                            <label id="style">Tipo</label>
                             <div class="about-radio flex">
-                                <div class="flex item-center">
+                                <div class="flex item-center personally">
                                     <input type="radio" value="option-1" name="option" id="personally">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#869198" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-building2-icon lucide-building-2"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg>
                                     <label for="personally">Presencial</label>
                                 </div>
 
-                                <div class="flex item-center">
+                                <div class="flex item-center online">
                                     <input type="radio" value="option-2" name="option" id="online">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#869198" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-video-icon lucide-video"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"/><rect x="2" y="6" width="14" height="12" rx="2"/></svg>
                                     <label for="online">Online</label>
@@ -70,7 +70,7 @@
                         </div>
 
                         <div class="grid gap-.75">
-                            <label>Local</label>
+                            <label id="style">Local</label>
                             <input type="text" placeholder="Link ou endereço">
                         </div>
 
@@ -88,7 +88,7 @@
                     </legend>
 
                     <div class="color-options grid mg-2.5">
-                        <label>Cor principal</label>
+                        <label id="prsn-style">Cor principal</label>
 
                         <div class="color-wrapper flex gap-.75">
                             <div class="inner-color">
@@ -138,7 +138,7 @@
                     </div>
 
                     <div class="event-theme grid gap-1">
-                        <label>Tema do evento</label>
+                        <label id="prsn-style">Tema do evento</label>
 
                         <div class="event-wrapper flex mg-2.5">
                             <div class="inner-event flex">
@@ -226,6 +226,22 @@
                                     <label id="lb-light">Claro</label>
                                 </div>
                             </div>
+
+                            <div class="cover-photo grid">
+                                <label id="style">Foto de capa</label>
+                                <div class="file-wrapper flex gap-.75 item-center">
+                                    <label for="send-file" class="btn-secondary">
+                                        <img src="assets/icons/upload.svg" alt="imagem de upload do botão secundário">
+                                        Selecionar
+                                    </label>
+                                    <input type="file" id="send-file" accept="image/jpeg" required>
+                                </div>
+
+                                <div class="error-wrapper flex item-center">
+                                    <img src="assets/icons/alert.svg" alt="imagem de alerta">
+                                    <small>Campo obrigatório</small>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </fieldset>
@@ -238,7 +254,7 @@
 
                     <div class="data-wrapper grid gap-1">
                         <div class="grid gap-.75">
-                            <label>Nome</label>
+                            <label id="style">Nome</label>
                             <input type="text" placeholder="Nome completo" required>
                             <div class="error-wrapper flex item-center">
                                 <img src="assets/icons/alert.svg" alt="imagem de alerta">
@@ -248,7 +264,7 @@
 
                         <div class="info-wrapper grid gap-1">
                             <div class="grid gap-.75 inner-data">
-                                <label>E-mail</label>
+                                <label id="style">E-mail</label>
                                 <input type="email" placeholder="exemplo@email.com" required>
                                 <div class="error-wrapper flex item-center">
                                     <img src="assets/icons/alert.svg" alt="imagem de alerta">
@@ -257,7 +273,7 @@
                             </div>
 
                             <div class="grid gap-.75">
-                                <label>Telefone</label>
+                                <label id="style">Telefone</label>
                                 <input type="tel" placeholder="(99) 99999-9999" required>
                                 <div class="error-wrapper flex item-center">
                                     <img src="assets/icons/alert.svg" alt="imagem de alerta">

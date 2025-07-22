@@ -223,32 +223,56 @@ label {
     padding: .25rem;
     gap: .25rem;
 
-
-    & input[type=radio] {
-        all: unset;
-    }
-
     & div {
         padding: .5rem;
         width: 100%;
         justify-content: center;
         gap: .5rem;
+    }
 
-        & label {
+    & .personally {
+        position: relative;
+
+        input[type="radio"] {
+            position: absolute;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: .5rem;
             cursor: pointer;
         }
     }
 
-    &:has(:checked) {
+    & .online {
+        position: relative;
+
+        input[type="radio"] {
+            position: absolute;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: .5rem;
+            cursor: pointer;
+        }
+    }
+
+    & .personally:has(:checked) {
         color: var(--text-heading);
+        background-color: var(--input-stroke);
+        border-radius: .25rem;
 
         svg {
             stroke: var(--brand-light);
         }
+    }
 
-        & div {
-            background-color: var(--input-stroke);
-            border-radius: .25rem;
+    & .online:has(:checked) {
+        color: var(--text-heading);
+        background-color: var(--input-stroke);
+        border-radius: .25rem;
+
+        svg {
+            stroke: var(--brand-light);
         }
     }
 }
@@ -407,6 +431,12 @@ label {
 
 #style {
     color: var(--text-body);
+    font-size: var(--body-sm);
+}
+
+#prsn-style {
+    font-size: var(--body-sm);
+    color: #FFFFFF;
 }
 
 .inner-style {
@@ -419,12 +449,11 @@ label {
     transition: .4s;
 
     & .style-dot {
+        margin: 3px;
         width: 1.5rem;
         height: 1.5rem;
         border-radius: 50%;
         background-color: var(--input-stroke);
-        margin-top: 3px;
-        margin-left: 3px;
         transition: .4s;
     }
 
@@ -459,17 +488,60 @@ label {
     margin-left: 4.75rem;
 }
 
+
 .cover-photo {
-    flex-direction: column;
-}
+    & input[type="file"] {
+        all: unset;
+        color: var(--input-placeholder);
+        margin-bottom: .25rem;
 
-.inner-lb {
-    justify-content: center;
-    top: .75rem;
-}
+        &:valid {
+            color: var(--text-body);
+        }
 
-input[type="file"] {
-    display: none;
+        &::file-selector-button{
+            display: none;
+        }
+    }
+
+    & .file-wrapper {
+        position: relative;
+
+        & .btn-secondary {
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+            height: 2.5rem;
+            bottom: .25rem;
+            padding-inline: .75rem;
+            padding-block: .25rem;
+            border-radius: .5rem;
+            font-weight: 600;
+            font-size: var(--body-sm);
+            color: var(--text-heading);
+            background-color: var(--shape-button);
+            cursor: pointer;
+            margin-bottom: unset;
+            position: relative;
+
+            &:hover {
+                background-color: var(--shape-hover);
+            }
+        }
+    }
+
+    &:has(input:user-invalid) {
+        .error-wrapper {
+            display: flex;
+        }
+    }
+
+    .error-wrapper {
+        color: var(--danger);
+        gap: .5rem;
+        margin-top: .5rem;
+        display: none;
+    }
 }
 
 .contact-info {
